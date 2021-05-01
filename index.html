@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Beat Maker</title>
+</head>
+
+<body>
+    <header>
+        <div class="main-title">
+            <h1>Welcome to Beat_Player</h1>
+        </div>
+    </header>
+    <div class="sequencer">
+        <div class="kick-tracker">
+            <div class="controls">
+                <h3>Kicks</h3>
+                <button data-track="0" class="mute kick-vol">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="kick-select" id="kick-select">
+                    <option value="../sounds/allSounds/kick-classic.wav">Classic Kick</option>
+                    <option value="./sounds/allSounds/kick-acoustic01.wav">Acoustic Kick</option>
+                    <option value="./sounds/allSounds/kick-floppy.wav">floppy Kick</option>
+                </select>
+            </div>
+            <div class="kick">
+                <div class="pad kick-pad b0"></div>
+                <div class="pad kick-pad b1"></div>
+                <div class="pad kick-pad b2"></div>
+                <div class="pad kick-pad b3"></div>
+                <div class="pad kick-pad b4"></div>
+                <div class="pad kick-pad b5"></div>
+                <div class="pad kick-pad b6"></div>
+                <div class="pad kick-pad b7"></div>
+            </div>
+        </div>
+        <div class="clap-tracker">
+            <div class="controls">
+                <h3>Claps</h3>
+                <button data-track="1" class="mute clap-vol">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="clap-select" id="clap-select">
+                    <option value="./sounds/allSounds/clap-tape.wav">Tape clap</option>
+                    <option value="./sounds/allSounds/clap-crushed.wav">Crushed clap</option>
+                    <option value="./sounds/allSounds/clap-slapper.wav">Slapper clap</option>
+                </select>
+            </div>
+            <div class="kick">
+                <div class="pad clap-pad b0"></div>
+                <div class="pad clap-pad b1"></div>
+                <div class="pad clap-pad b2"></div>
+                <div class="pad clap-pad b3"></div>
+                <div class="pad clap-pad b4"></div>
+                <div class="pad clap-pad b5"></div>
+                <div class="pad clap-pad b6"></div>
+                <div class="pad clap-pad b7"></div>
+            </div>
+        </div>
+        <div class="hihat-tracker">
+            <div class="controls">
+                <h3>Hihat</h3>
+                <button data-track="2" class="mute hihat-vol">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+                <select name="hihat-select" id="hihat-select">
+                    <option value="./sounds/allSounds/hihat-digital.wav">Digital Hihat</option>
+                    <option value="./sounds/allSounds/hihat-acoustic01.wav">Acoustic hihat</option>
+                    <option value="./sounds/allSounds/hihat-plain.wav">Plain hihat</option>
+                </select>
+            </div>
+            <div class="kick">
+                <div class="pad hihat-pad b0"></div>
+                <div class="pad hihat-pad b1"></div>
+                <div class="pad hihat-pad b2"></div>
+                <div class="pad hihat-pad b3"></div>
+                <div class="pad hihat-pad b4"></div>
+                <div class="pad hihat-pad b5"></div>
+                <div class="pad hihat-pad b6"></div>
+                <div class="pad hihat-pad b7"></div>
+            </div>
+        </div>
+        <div class="tempo">
+            <input type="range" max="400" min="30" value="150" class="tempo-slider">
+            <p>Tempo:<span class="tempo-nr"></span></p>
+        </div>
+        <button class="play">Play</button>
+    </div>
+    <audio class="kick-sound" src="./sounds/allSounds/kick-classic.wav"></audio>
+    <audio class="clap-sound" src="./sounds/allSounds/crash-tape.wav"></audio>
+    <audio class="hihat-sound" src="./sounds/allSounds/hihat-digital.wav"></audio>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous">
+    <script src="/app.js"></script>
+</body>
+
+</html>
